@@ -15,9 +15,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Hello world action step
         id: hello
-        uses: xylo04/hello-world-docker-action@v1.3
+        uses: xylo04/hello-world-docker-action@v2.1
         with:
-          who-to-greet: 'Joe Schmoe'
+          function-name: Hello
+          project-id: random-stuff-292920
+          entry-point: Hello
+          runtime: go113
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
