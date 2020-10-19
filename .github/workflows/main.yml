@@ -16,8 +16,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - id: Deploy
-        uses: xylo04/github-actions/cloudfunctions-deploy@master
+        uses: GoogleCloudPlatform/github-actions/deploy-cloud-functions@cf-action
         with:
           name: Hello
           entry_point: Hello
-          project_id: random-stuff-292920
