@@ -20,3 +20,4 @@ jobs:
         with:
           name: Hello
           entry_point: Hello
+          runtime: go113
