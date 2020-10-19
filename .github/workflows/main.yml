@@ -9,13 +9,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - id: GCP_Auth
+      - name: GCP Auth
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: '290.0.1'
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-      - id: Deploy
+      - name: Cloud Functions Deploy
         uses: GoogleCloudPlatform/github-actions/deploy-cloud-functions@cf-action
         with:
           name: Hello
