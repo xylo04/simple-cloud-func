@@ -16,7 +16,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - name: Cloud Functions Deploy
-        uses: GoogleCloudPlatform/github-actions/deploy-cloud-functions@cf-action
+        uses: GoogleCloudPlatform/github-actions/deploy-cloud-functions@master
         with:
           name: Hello
           entry_point: Hello
